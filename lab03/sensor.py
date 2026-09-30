@@ -1,4 +1,4 @@
-celling_result = int(input()) # Порог в цельсиях
+celling_result = float(input()) # Порог в цельсиях
 n = int(input()) # количество повторений
 error_count = 0
 exceeding_count = 0
