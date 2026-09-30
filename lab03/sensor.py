@@ -2,7 +2,7 @@ celling_result = int(input()) # Порог в цельсиях
 n = int(input()) # количество повторений
 error_count = 0
 exceeding_count = 0
-mx_temperature  = 0
+mx_temperature  = float("-inf")
 sr = 0
 for _ in range(n):
     temp = input().strip() # Ввод температуры
