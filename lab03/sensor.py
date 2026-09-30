@@ -20,5 +20,5 @@ sr_temperature = sr / (n-error_count) # Вычисление средней те
 print(n)
 print(error_count)
 print(exceeding_count)
-print(mx)
+print(mx_temperature)
 print(sr_temperature)
