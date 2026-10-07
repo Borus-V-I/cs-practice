@@ -1,6 +1,3 @@
-names =  ["Аня", "Боря", "Вика"]
-scores = [7.0,   9.0,    9.0]
-
 def winner(names: list[str], scores: list[float]) -> str:
     if len(scores) == 0:
         return ''
@@ -34,8 +31,11 @@ def above_average(names: list[str], scores: list[float]) -> list[str]:
     res = []
     for i in range(len(names)):
         if scores[i] > avg:
-        res.append(names[i])
+            res.append(names[i])
     return res
+
+names =  ["Аня", "Боря", "Вика"]
+scores = [7.0,   9.0,    9.0]
 
 print(winner(names,scores))
 print(average(scores))
