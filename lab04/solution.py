@@ -28,3 +28,16 @@ def ranking(names: list[str], scores: list[float]) -> list[str]:
     for i in indices:
         res.append(names[i])
     return res
+
+def above_average(names: list[str], scores: list[float]) -> list[str]:
+    avg = average(scores)
+    res = []
+    for i in range(len(names)):
+        if scores[i] > avg:
+        res.append(names[i])
+    return res
+
+print(winner(names,scores))
+print(average(scores))
+print(ranking(names,scores))
+print(above_average(names,scores))
