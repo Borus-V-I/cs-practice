@@ -20,17 +20,16 @@ def read_rows(lines: list[str]) -> list[dict]:
 
     return rows
 
+
 def count_types(rows: list[dict]) -> dict:
     counts = {}
 
     for row in rows:
         kind = row["тип"]
-        if kind in counts:
-            counts[kind] += 1
-        else:
-            counts[kind] = 1
+        counts[kind] = counts.get(kind, 0) + 1
 
     return counts
+
 
 def total_minutes(rows: list[dict], kind: str) -> float:
     total = 0.0
@@ -40,7 +39,7 @@ def total_minutes(rows: list[dict], kind: str) -> float:
             continue
 
         try:
-            minutes = float(row["минуты"].replace(",","."))
+            minutes = float(row["минуты"].replace(",", "."))
         except ValueError:
             continue
 
@@ -48,8 +47,9 @@ def total_minutes(rows: list[dict], kind: str) -> float:
 
     return round(total, 1)
 
+
 def to_csv(counts: dict) -> str:
-    text = "Тип,количество\n"
+    text = "тип,количество\n"
 
     for kind in sorted(counts):
         text += f"{kind},{counts[kind]}\n"
