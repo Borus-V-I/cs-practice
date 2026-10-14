@@ -1,7 +1,6 @@
 from tablestats import *
 from pathlib import Path
 
-
 def main() -> None:
     path = input().strip()
 
@@ -18,6 +17,5 @@ def main() -> None:
     with open(summary_path, "w", encoding="utf-8") as out:
         out.write(to_csv(counts))
 
-
 if __name__ == "__main__":
-    print()
+    main()
