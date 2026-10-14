@@ -25,7 +25,10 @@ def count_types(rows: list[dict]) -> dict:
 
     for row in rows:
         kind = row["тип"]
-        counts[kind] = counts.get(kind, 0) + 1
+        if kind in counts:
+            counts[kind] += 1
+        else:
+            counts[kind] = 1
 
     return counts
 
