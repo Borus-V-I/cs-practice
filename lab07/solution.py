@@ -22,3 +22,12 @@ def column_means(matrix: list[list[float]]) -> list[float]:
 
     arr = np.asarray(matrix, dtype=float)
     return np.round(arr.mean(axis=0), 6).tolist()
+
+def column_range(matrix: list[list[float]], column: int) -> float:
+    if not matrix:
+        return 0.0
+
+    arr = np.asarray(matrix, dtype=float)
+    values = arr[:, column]
+
+    return float(np.round(values.max() - values.min(), 6))
