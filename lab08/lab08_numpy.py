@@ -87,3 +87,39 @@ corner = matrix[-2:, -2:]
 print("Правый нижний блок 2x2:")
 print(corner)
 print("shape:", corner.shape)
+
+
+# Задание 5. Изменение массива с помощью срезов
+
+print("\nЗадание 5")
+
+vector = np.array([10, 20, 30, 40, 50])
+vector[1:4] = 0
+
+small_matrix = np.arange(1, 10).reshape(3, 3)
+small_matrix[0, :] = -1
+small_matrix[1:, 1:] = 9
+
+print("vector после изменения:", vector)
+print("small_matrix после изменения:")
+print(small_matrix)
+
+changed_hours = hours.copy()
+
+changed_hours[2:5] = 99
+changed_hours[::2] = -1
+
+print("changed_hours:", changed_hours)
+print("Исходный hours:", hours)
+
+changed_matrix = matrix.copy()
+
+changed_matrix[1, :] = 0
+changed_matrix[:, -1] = -1
+changed_matrix[1:4, 1:4] = 100
+
+print("changed_matrix:")
+print(changed_matrix)
+
+print("Исходная matrix:")
+print(matrix)
