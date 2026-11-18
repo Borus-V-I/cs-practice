@@ -18,7 +18,7 @@ def average(scores: list[float]) -> float:
 def ranking(names: list[str], scores: list[float]) -> list[str]:
     indices = list(range(len(names)))
 
-    indices.sort(key=lambda i: scores[i], reverse = True)
+    indices.sort(key=lambda i: scores[i], reverse=True)
 
     res = []
 
@@ -36,7 +36,7 @@ def above_average(names: list[str], scores: list[float]) -> list[str]:
 
 if __name__ == '__main__':
     names =  ["Аня", "Боря", "Вика"]
-    scores = [7.0,   9.0,    9.0]
+    scores = [7.0,   9.0,    5.0]
 
     print(winner(names,scores))
     print(average(scores))
