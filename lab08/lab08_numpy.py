@@ -123,3 +123,22 @@ print(changed_matrix)
 
 print("Исходная matrix:")
 print(matrix)
+
+# Задание 6. Изменение формы
+
+numbers = np.arange(12)
+table = numbers.reshape(3, 4)
+transposed = table.T
+
+print("\nЗадание 6")
+print("numbers:")
+print(numbers)
+print("Форма numbers:", numbers.shape)
+
+print("table:")
+print(table)
+print("Форма table:", table.shape)
+
+print("transposed:")
+print(transposed)
+print("Форма transposed:", transposed.shape)
