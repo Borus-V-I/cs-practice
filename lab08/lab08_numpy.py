@@ -53,3 +53,37 @@ print(temperatures[:2, 1:])
 print("Центральный фрагмент 2x2:")
 print(temperatures[:2, 1:3])
 print("Форма центрального фрагмента:", temperatures[:2, 1:3].shape)
+
+
+# Задание 4. Прямоугольные срезы
+
+matrix = np.arange(1, 26).reshape(5, 5)
+
+print("\nЗадание 4")
+print("Матрица:")
+print(matrix)
+
+first_three = matrix[:3, :]
+print("Первые три строки:")
+print(first_three)
+print("shape:", first_three.shape)
+
+last_two = matrix[-2:, :]
+print("Последние две строки:")
+print(last_two)
+print("shape:", last_two.shape)
+
+first_two_columns = matrix[:, :2]
+print("Первые два столбца:")
+print(first_two_columns)
+print("shape:", first_two_columns.shape)
+
+fragment = matrix[1:4, 2:5]
+print("Фрагмент строк 1–3 и столбцов 2–4:")
+print(fragment)
+print("shape:", fragment.shape)
+
+corner = matrix[-2:, -2:]
+print("Правый нижний блок 2x2:")
+print(corner)
+print("shape:", corner.shape)
