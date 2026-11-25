@@ -26,3 +26,11 @@ def replace_rectangle(matrix, row_start, row_stop,
     result[row_start:row_stop, column_start:column_stop] = value
 
     return result.tolist()
+
+
+# 4. Умножение матрицы на вектор
+def matrix_vector_product(matrix, vector):
+    A = np.array(matrix)
+    b = np.array(vector)
+
+    return (A @ b).tolist()
