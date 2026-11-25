@@ -42,3 +42,8 @@ def matrix_multiply(left, right):
     B = np.array(right)
 
     return (A @ B).tolist()
+
+
+# 6. Транспонирование матрицы
+def transpose_matrix(matrix):
+    return np.array(matrix).T.tolist()
