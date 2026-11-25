@@ -57,3 +57,10 @@ def solve_system(matrix, vector):
     result = np.linalg.solve(A, b)
 
     return np.round(result, 6).tolist()
+
+
+# 8. Усреднение каналов тензора
+def tensor_channel_mean(tensor):
+    arr = np.array(tensor)
+
+    return arr.mean(axis=-1).tolist()
