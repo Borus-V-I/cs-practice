@@ -64,3 +64,11 @@ def tensor_channel_mean(tensor):
     arr = np.array(tensor)
 
     return arr.mean(axis=-1).tolist()
+
+
+# 9. Евклидово расстояние между точками
+def point_distance(first, second):
+    A = np.array(first)
+    B = np.array(second)
+
+    return round(float(np.linalg.norm(A - B)), 6)
