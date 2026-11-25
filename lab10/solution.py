@@ -47,3 +47,13 @@ def matrix_multiply(left, right):
 # 6. Транспонирование матрицы
 def transpose_matrix(matrix):
     return np.array(matrix).T.tolist()
+
+
+# 7. Решение системы линейных уравнений
+def solve_system(matrix, vector):
+    A = np.array(matrix)
+    b = np.array(vector)
+
+    result = np.linalg.solve(A, b)
+
+    return np.round(result, 6).tolist()
