@@ -34,3 +34,11 @@ def matrix_vector_product(matrix, vector):
     b = np.array(vector)
 
     return (A @ b).tolist()
+
+
+# 5. Умножение двух матриц
+def matrix_multiply(left, right):
+    A = np.array(left)
+    B = np.array(right)
+
+    return (A @ B).tolist()
